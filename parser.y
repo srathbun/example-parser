@@ -285,14 +285,15 @@ char **argv;
 	}
 
 	if (help_flag == 1) {
-		printf("proper syntax is: cleaner [OPTIONS]... INFILE OUTFILE\n");
-		printf("Strips non printable chars from input, adds line breaks on esc fs gs and us\n\n");
+		printf("proper syntax is: example [OPTIONS]... INFILE OUTFILE\n");
+		printf("Parses input file to collect and mark 'statements'.\n\n");
 		printf("Option list: \n");
+		printf("-d    					turns on debug info\n");
 		printf("-o    					sets output to stdout\n");
 		printf("--help       			print help to screen\n");
 		printf("\n");
 		printf("If infile is left out, then stdin is used for input.\n");
-		printf("If outfile is a filename, then that file is used.\n");
+		printf("If outfile is a filename, then that file is used for output.\n");
 		printf("If there is no outfile, then infile-EDIT is used.\n");
 		printf("There cannot be an outfile without an infile.\n");
 		return 0;
